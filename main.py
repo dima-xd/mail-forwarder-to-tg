@@ -126,13 +126,13 @@ async def create(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     if len(update.message.text.split(' ')) != 2:
         await update.message.reply_html(
-            rf"{user.mention_html()}, usage: /create 'nickname'\nExample: /create john",
+            f"{user.mention_html()}, usage: /create 'nickname'\nExample: /create john",
         )
         return
 
     if not is_valid_email_name(update.message.text.split(' ')[1]):
         await update.message.reply_html(
-            rf"{user.mention_html()}, invalid nickname. It must be 3-30 characters long, contain only lowercase letters, digits, underscores or hyphens, and cannot start or end with a special character.",
+            f"{user.mention_html()}, invalid nickname. It must be 3-30 characters long, contain only lowercase letters, digits, underscores or hyphens, and cannot start or end with a special character.",
         )
         return
 
