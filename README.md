@@ -119,7 +119,7 @@ TXT  @              "v=spf1 ip4:YOUR_SERVER_IP -all"
    2025-12-25 14:30:00
 
    From: sender@domain.com
-   To: john@example.com
+   To: example@example.com
    Subject: Test Email
 
    Email body content...
