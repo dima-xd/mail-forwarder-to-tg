@@ -53,10 +53,7 @@ def _format_for_telegram(sender, recipients, subject, body):
     safe_sender = html.escape(sender)
     safe_recipients = html.escape(', '.join(recipients))
     safe_subject = html.escape(subject)
-    safe_body = html.escape(body[:1500])
-
-    if len(body) > 1500:
-        safe_body += " [...]"
+    safe_body = html.escape(body)
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
